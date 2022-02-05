@@ -1,0 +1,124 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Quote Generator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- START choice container -->
+  <div class="choiceContainer" id="choiceContainer">
+    <!-- Buttons -->
+    <div class="choiceContainer">
+        <button id="motivateMe" onclick="motivateMe()">Motivate Me!</button>
+        <button id="getJoke" onclick="getJoke()">Tell Me A Joke ;)</button>
+        <button id="getTime" onclick="dateTime()">What's The Time?</button>
+        <!-- <button id="new-quote" onclick="close_window();return false;">EXIT :'(</button> -->
+    </div>
+  </div>
+  <!-- END choice container -->
+
+  <!-- START quote container -->
+  <div class="quoteContainer" id="quoteContainer" hidden>
+    <!-- Quote -->
+    <div class="closeContainer">
+      <button onclick="back()"><i class="far fa-window-close"></i></button>
+    </div>
+    <div class="quoteText">
+        <i class="fas fa-quote-left"></i>
+        <span id="quote"></span>
+        <i class="fas fa-quote-right"></i>
+    </div>
+    <!-- Author -->
+    <div class="quoteAuthor">
+      &#8212;<span id="author"></span>
+    </div>
+    <!-- Buttons -->
+    <div class="button-container">
+        <button class="twitter-button" id="twitter" title="Tweet This!">
+            <i class="fab fa-twitter"></i>
+        </button>
+        <button id="new-quote" onclick="getQuote()">Motivate Me!</button>
+    </div>
+  </div>
+  <!-- END quote container -->
+
+  <!-- START time container -->
+  <div class="timeContainer" id="timeContainer" hidden>
+    <!-- Quote -->
+    <div class="closeContainer">
+      <button onclick="back()"><i class="far fa-window-close"></i></button>
+    </div>
+    <div class="timeText">
+      <span id="timeText"></span>
+    </div>
+    <!-- Buttons -->
+    <!-- <div class="button-container">
+        <button class="twitter-button" id="twitter" title="Tweet This!">
+            <i class="fab fa-twitter"></i>
+        </button>
+        <button id="new-quote" onclick="getQuote()">Motivate Me!</button>
+    </div> -->
+  </div>
+  <!-- END time container -->
+
+  <!-- START joke container -->
+  <div class="jokeContainer" id="jokeContainer" hidden>
+    <!-- Quote -->
+    <div class="closeContainer">
+      <button onclick="back()"><i class="far fa-window-close"></i></button>
+    </div>
+    <div class="jokeText">
+      <p id="jokeText"></p>
+    </div>
+    <!-- Buttons -->
+    <div class="button-container">
+        <button class="twitter-button" id="twitter" title="Tweet This!">
+            <i class="fab fa-twitter"></i>
+        </button>
+        <button class="jokeButton">Get another Dad Joke</button>
+    </div>
+  </div>
+  <!-- END time container -->
+
+
+  <!-- Loader -->
+  <div class="loader" id="loader" hidden></div>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  
+  <!-- particle.js background -->
+  <canvas class="background"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>
